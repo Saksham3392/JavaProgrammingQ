@@ -1,0 +1,2121 @@
+<USER_REQUEST>
+add these questions also
+1. Student Details  
+Problem Statement: Write a Java program to create a Student class that stores student details and demonstrates 
+the use of the this and static keywords. 
+The class should contain the following data members: 
+• String name 
+• int marks 
+• static int studentCount 
+Create a parameterized constructor that accepts the student's name and marks and uses the this keyword to 
+initialize the instance variables. 
+The constructor should also increment the static studentCount variable whenever a new student object is 
+created. 
+Create a displayDetails() method to display the student's name and marks. 
+In the main() method, create multiple student objects, display their details, and finally display the total number 
+of students created using the static variable. 
+Input Format 
+The first line contains an integer n, representing the number of students. 
+The next n lines each contain: 
+• A string representing the student's name 
+• An integer representing the student's marks 
+Output Format 
+For each student, print: 
+• Student Name 
+• Marks 
+After displaying all student details, print the total number of students created. 
+Sample Test Case 1 
+Input: 
+3 
+Aman 85 
+Rahul 90 
+Priya 78 
+Output: 
+Student Name: Aman 
+Marks: 85 
+Student Name: Rahul 
+Marks: 90 
+Student Name: Priya 
+Marks: 78 
+Total Students: 3 
+Explanation: 
+The parameterized constructor uses the this keyword to initialize the name and marks instance variables. 
+Every time a student object is created, the static studentCount variable is increased by 1. 
+Three objects are created, so the final value of studentCount is 3. 
+Sample Test Case 2 
+Input: 
+2 
+Karan 92 
+Simran 88 
+Output: 
+Student Name: Karan 
+Marks: 92 
+Student Name: Simran 
+Marks: 88 
+Total Students: 2 
+Explanation: 
+The this keyword refers to the current object and initializes its instance variables. The static variable 
+studentCount is shared among all Student objects and keeps track of the total number of objects created. 
+2. Employee Salary Calculation Using Method Overloading 
+Problem Statement: 
+A company wants to calculate the salary of its employees using classes, objects, and method overloading in 
+Java. 
+Write a Java program to create a class named Employee with the following data members: 
+• int empId 
+• String empName 
+• double basicSalary 
+Create the following overloaded methods: 
+• double calculateSalary(double basicSalary) – Calculate the salary using only the basic salary. 
+• double calculateSalary(double basicSalary, double bonus) – Calculate the salary by adding the basic 
+salary and bonus. 
+• double calculateSalary(double basicSalary, double bonus, double allowance) – Calculate the salary by 
+adding the basic salary, bonus, and allowance. 
+Create a method: 
+• void displayDetails() – Display the employee ID, employee name, and calculated salary. 
+In the main() method, create an object of the Employee class, accept the employee details from the user, call the 
+appropriate overloaded calculateSalary() method, and display the result. 
+Formula: 
+• Salary = Basic Salary 
+• Salary = Basic Salary + Bonus 
+• Salary = Basic Salary + Bonus + Allowance 
+Sample Input: 
+Enter Employee ID: 101 
+Enter Employee Name: Aman 
+Enter Basic Salary: 30000 
+Enter Bonus: 5000 
+Enter Allowance: 3000 
+Sample Output: 
+Employee ID: 101 
+Employee Name: Aman 
+Calculated Salary: 38000.0 
+3. Constructor Overloading – Ice Cream Parlour 
+Problem Statement: 
+An ice cream parlour wants to maintain details of different ice creams ordered by customers. Write a Java 
+program to create an IceCream class that demonstrates constructor overloading. 
+The class should contain the following data members: 
+• String flavor 
+• int quantity 
+• double price 
+Create the following overloaded constructors: 
+• A default constructor that initializes the flavor as "Vanilla", quantity as 1, and price as 50.0. 
+• A constructor that accepts the flavor and initializes the quantity as 1 and price as 50.0. 
+• A constructor that accepts the flavor, quantity, and price and initializes all the data members. 
+Create a displayDetails() method to display the ice cream flavor, quantity, and price. 
+In the main() method, take the number of ice creams and their details from the user, create objects using the 
+appropriate overloaded constructors, and display the details of each ice cream. 
+Constraints: 
+• 1 ≤ n ≤ 100 
+• 1 ≤ quantity ≤ 20 
+• 0 < price ≤ 1000 
+Input Format 
+The first line contains an integer n, representing the number of ice cream objects to be created. 
+For each ice cream, the user enters a choice: 
+• 1 for the default constructor. 
+• 2 for the constructor with flavor. 
+• 3 for the constructor with flavor, quantity, and price. 
+For choice 2, the next line contains the ice cream flavor. 
+For choice 3, the next line contains the ice cream flavor, quantity, and price. 
+ 
+Output Format 
+For each ice cream, print: 
+Flavor: X 
+Quantity: Y 
+Price: Z 
+Sample Test Case 1 
+Input: 
+3 
+1 
+2 
+Chocolate 
+3 
+Strawberry 2 80 
+Output: 
+Flavor: Vanilla 
+Quantity: 1 
+Price: 50.0 
+Flavor: Chocolate 
+Quantity: 1 
+Price: 50.0 
+Flavor: Strawberry 
+Quantity: 2 
+Price: 80.0 
+Explanation: 
+The first ice cream is created using the default constructor, so the default values are assigned. 
+The second ice cream is created using the constructor that accepts only the flavor. Therefore, the quantity is 1 
+and the price is 50.0. The third ice cream is created using the constructor that accepts the flavor, quantity, and 
+price. 
+ 
+Sample Test Case 2 
+Input: 
+2 
+2 
+Butterscotch 
+3 
+Mango 3 120 
+Output: 
+Flavor: Butterscotch 
+Quantity: 1 
+Price: 50.0 
+Flavor: Mango 
+Quantity: 3 
+Price: 120.0 
+Explanation: 
+The first ice cream uses the one-parameter constructor, while the second ice cream uses the three-parameter 
+constructor. 
+ 
+Sample Test Case 3 
+Input: 
+1 
+1 
+Output: 
+Flavor: Vanilla 
+Quantity: 1 
+Price: 50.0 
+ 
+Sample Test Case 4 
+Input: 
+2 
+3 
+Chocolate 2 100 
+3 
+Vanilla 4 60 
+Output: 
+Flavor: Chocolate 
+Quantity: 2 
+Price: 100.0 
+Flavor: Vanilla 
+Quantity: 4 
+Price: 60.0 
+ 
+Sample Test Case 5 
+Input: 
+3 
+2 
+Pistachio 
+2 
+Strawberry 
+3 
+Black Currant 2 90 
+Output: 
+Flavor: Pistachio 
+Quantity: 1 
+Price: 50.0 
+Flavor: Strawberry 
+Quantity: 1 
+Price: 50.0 
+Flavor: Black Currant 
+Quantity: 2 
+Price: 90.0 
+ 
+Sample Test Case 6 
+Input: 
+1 
+3 
+Kulfi 5 75 
+Output: 
+Flavor: Kulfi 
+Quantity: 5 
+Price: 75.0 
+ 
+4. Method Overloading – CSE Department Events 
+Problem Statement: 
+The CSE Department organized several events for students. The department wants to calculate the total 
+participation points earned by students using different methods. 
+Write a Java program to create an Event class that demonstrates method overloading. 
+Create the following overloaded methods: 
+• int calculatePoints(int participation) – Calculate points based only on participation. 
+• int calculatePoints(int participation, int quiz) – Calculate total points from participation and quiz. 
+• int calculatePoints(int participation, int quiz, int presentation) – Calculate total points from participation, 
+quiz, and presentation. 
+Create a displayResult() method to display the calculated total points. 
+In the main() method, take the required values from the user, call the appropriate overloaded calculatePoints() 
+method, and display the result. 
+Constraints: 
+• 1 ≤ participation ≤ 100 
+• 0 ≤ quiz ≤ 100 
+• 0 ≤ presentation ≤ 100 
+Input Format 
+The first line contains an integer choice, representing the type of calculation: 
+• 1 – Participation points only 
+• 2 – Participation and quiz points 
+• 3 – Participation, quiz, and presentation points 
+The next line contains the required integer values according to the selected choice. 
+Output Format 
+Print: 
+Total Points: X 
+Sample Test Case 1 
+Input: 
+1 
+80 
+Output: 
+Total Points: 80 
+Explanation: 
+The CSE Department calculated the student's points using only participation. Therefore, the calculatePoints(int 
+participation) method is called. 
+Sample Test Case 2 
+Input: 
+2 
+70 85 
+Output: 
+Total Points: 155 
+Explanation: 
+The student's participation points are 70 and quiz points are 85. Therefore: 
+70 + 85 = 155 
+The overloaded method with two parameters is called. 
+Sample Test Case 3 
+Input: 
+3 
+70 80 90 
+Output: 
+Total Points: 240 
+Sample Test Case 4 
+Input: 
+2 
+60 75 
+Output: 
+Total Points: 135 
+Sample Test Case 5 
+Input: 
+3 
+85 90 95 
+Output: 
+Total Points: 270 
+Sample Test Case 6 
+Input: 
+1 
+95 
+Output: 
+Total Points: 95 
+5. Classes and Objects – Mechanical Worker Details 
+Problem Statement: 
+A mechanical workshop wants to maintain the details of its workers. Write a Java program to create a class 
+named Worker with the following data members: 
+• int workerId 
+• String workerName 
+• double dailyWage 
+Create the following member methods: 
+• void acceptDetails() – Accept the worker ID, worker name, and daily wage from the user. 
+• void displayDetails() – Display the worker ID, worker name, and daily wage. 
+In the main() method, create an object of the Worker class, accept the worker details, and display them. 
+Constraints: 
+• 1 ≤ workerId ≤ 9999 
+• 1 ≤ dailyWage ≤ 10000 
+• Worker name should not be empty. 
+Input Format 
+The first line contains an integer representing the worker ID. 
+The second line contains a string representing the worker name. 
+The third line contains a double value representing the daily wage. 
+Output Format 
+Print: 
+Worker ID 
+Worker Name 
+Daily Wage 
+Sample Test Case 1 
+Input: 
+101 
+Rahul 
+850 
+Output: 
+Worker ID: 101 
+Worker Name: Rahul 
+Daily Wage: 850.0 
+Explanation: 
+The worker's ID is 101, name is Rahul, and daily wage is 850. The program accepts these details using the 
+acceptDetails() method and displays them using the displayDetails() method. 
+Sample Test Case 2 
+Input: 
+205 
+Aman 
+950 
+Output: 
+Worker ID: 205 
+Worker Name: Aman 
+Daily Wage: 950.0 
+Sample Test Case 3 
+Input: 
+310 
+Karan 
+1200 
+Output: 
+Worker ID: 310 
+Worker Name: Karan 
+Daily Wage: 1200.0 
+Sample Test Case 4 
+Input: 
+415 
+Riya 
+780 
+Output: 
+Worker ID: 415 
+Worker Name: Riya 
+Daily Wage: 780.0 
+Sample Test Case 5 
+Input: 
+520 
+Simran 
+1000 
+Output: 
+Worker ID: 520 
+Worker Name: Simran 
+Daily Wage: 1000.0 
+Sample Test Case 6 
+Input: 
+601 
+Mayank 
+1500 
+Output: 
+Worker ID: 601 
+Worker Name: Mayank 
+Daily Wage: 1500.0 
+6. College Details Using Static Keyword 
+Problem Statement: 
+A college wants to maintain its common details for all students. The admin can enter the college details only 
+once, and the same details should be displayed for every student. 
+Write a Java program to create a Student class with the following data members: 
+• String studentName 
+• static String collegeName 
+• static String collegeAddress 
+The college name and college address should be entered by the admin only once using static variables. These 
+details should be common and shared among all students. 
+Create the following methods: 
+• void acceptStudentDetails() – Accept the student's name from the user. 
+• static void acceptCollegeDetails() – Accept the college name and address from the admin only once. 
+• void displayDetails() – Display the student's name along with the common college details. 
+In the main() method, accept the college details once from the admin, then accept the details of multiple students 
+and display their details along with the same college information. 
+Constraints: 
+• College details should be entered only once. 
+• collegeName and collegeAddress must be declared using the static keyword. 
+• The same college details must be shared by all student objects. 
+• Student name should not be empty. 
+• 1 ≤ n ≤ 100. 
+Input Format 
+The first line contains a string representing the college name entered by the admin. 
+The second line contains a string representing the college address entered by the admin. 
+The third line contains an integer n, representing the number of students. 
+The next n lines each contain a string representing the student's name. 
+Output Format 
+For each student, print: 
+Student Name 
+College Name 
+College Address 
+Sample Test Case 1 
+Input: 
+ABC College 
+Chandigarh 
+3 
+Aman 
+Rahul 
+Priya 
+Output: 
+Student Name: Aman 
+College Name: ABC College 
+College Address: Chandigarh 
+Student Name: Rahul 
+College Name: ABC College 
+College Address: Chandigarh 
+Student Name: Priya 
+College Name: ABC College 
+College Address: Chandigarh 
+Explanation: 
+The admin enters the college name as ABC College and the address as Chandigarh only once. These values are 
+stored in the static variables collegeName and collegeAddress. The same college details are then shared and 
+displayed for all three student objects. 
+Sample Test Case 2 
+Input: 
+XYZ University 
+Delhi 
+2 
+Karan 
+Simran 
+Output: 
+Student Name: Karan 
+College Name: XYZ University 
+College Address: Delhi 
+Student Name: Simran 
+College Name: XYZ University 
+College Address: Delhi 
+Explanation: 
+The college details are entered only once by the admin. Since collegeName and collegeAddress are static, both 
+Karan and Simran use the same college information. 
+Sample Test Case 3 
+Input: 
+National College 
+Mumbai 
+4 
+Rohit 
+Neha 
+Arjun 
+Pooja 
+Output: 
+Student Name: Rohit 
+College Name: National College 
+College Address: Mumbai 
+Student Name: Neha 
+College Name: National College 
+College Address: Mumbai 
+Student Name: Arjun 
+College Name: National College 
+College Address: Mumbai 
+Student Name: Pooja 
+College Name: National College 
+College Address: Mumbai 
+Sample Test Case 4 
+Input: 
+Green Valley College 
+Patiala 
+1 
+Harpreet 
+Output: 
+Student Name: Harpreet 
+College Name: Green Valley College 
+College Address: Patiala 
+Sample Test Case 5 
+Input: 
+Sunrise University 
+Jaipur 
+5 
+Ankit 
+Riya 
+Mohit 
+Simran 
+Varun 
+Output: 
+Student Name: Ankit 
+College Name: Sunrise University 
+College Address: Jaipur 
+Student Name: Riya 
+College Name: Sunrise University 
+College Address: Jaipur 
+Student Name: Mohit 
+College Name: Sunrise University 
+College Address: Jaipur 
+Student Name: Simran 
+College Name: Sunrise University 
+College Address: Jaipur 
+Student Name: Varun 
+College Name: Sunrise University 
+College Address: Jaipur 
+Sample Test Case 6 
+Input: 
+Techno Institute 
+Ludhiana 
+2 
+Deepak 
+Mehak 
+Output: 
+Student Name: Deepak 
+College Name: Techno Institute 
+College Address: Ludhiana 
+ 
+Student Name: Mehak 
+College Name: Techno Institute 
+College Address: Ludhiana 
+ 
+7. Constructor Overloading – Student Football Players 
+Problem Statement: A group of students is playing a football match. The coach wants to maintain the details of 
+the players. Write a Java program to create a Player class and demonstrate constructor overloading. 
+The class should contain the following data members: 
+• String playerName 
+• int age 
+• int jerseyNumber 
+Create the following overloaded constructors: 
+• A default constructor that initializes the player name as "Unknown", age as 18, and jersey number as 
+0. 
+• A constructor that accepts only the player name and initializes age as 18 and jersey number as 0. 
+• A constructor that accepts player name, age, and jersey number and initializes all the data members. 
+Create a displayDetails() method to display the player's name, age, and jersey number. 
+In the main() method, take the required input from the user, create player objects using the appropriate overloaded 
+constructors, and display their details. 
+Constraints: 
+• 1 ≤ n ≤ 11 
+• 10 ≤ age ≤ 40 
+• 0 ≤ jerseyNumber ≤ 99 
+• Player name must not be empty. 
+• The program must use constructor overloading. 
+• All constructors must have different parameter lists. 
+ 
+Input Format 
+The first line contains an integer n, representing the number of players. 
+For each player, the user enters a choice: 
+• 1 – Use the default constructor. 
+• 2 – Use the constructor with player name. 
+• 3 – Use the constructor with player name, age, and jersey number. 
+For choice 2, the next line contains the player name. 
+For choice 3, the next line contains the player name, age, and jersey number. 
+ 
+Output Format 
+For each player, print: 
+Player Name 
+Age 
+Jersey Number 
+ 
+Sample Test Case 1 
+Input: 
+3 
+1 
+2 
+Aman 
+3 
+Rahul 20 10 
+Output: 
+Player Name: Unknown 
+Age: 18 
+Jersey Number: 0 
+Player Name: Aman 
+Age: 18 
+Jersey Number: 0 
+Player Name: Rahul 
+Age: 20 
+Jersey Number: 10 
+Explanation: 
+The first player is created using the default constructor. The second player is created using the constructor that 
+accepts only the player name. The third player is created using the constructor that accepts the player name, age, 
+and jersey number. 
+ 
+Sample Test Case 2 
+Input: 
+2 
+2 
+Karan 
+3 
+Simran 19 7 
+Output: 
+Player Name: Karan 
+Age: 18 
+Jersey Number: 0 
+Player Name: Simran 
+Age: 19 
+Jersey Number: 7 
+Explanation: 
+The first player is created using the one-parameter constructor, while the second player is created using the three
+parameter constructor. 
+ 
+Sample Test Case 3 
+Input: 
+1 
+1 
+Output: 
+Player Name: Unknown 
+Age: 18 
+Jersey Number: 0 
+ 
+Sample Test Case 4 
+Input: 
+2 
+3 
+Amit 21 9 
+3 
+Rohit 22 11 
+Output: 
+Player Name: Amit 
+Age: 21 
+Jersey Number: 9 
+Player Name: Rohit 
+Age: 22 
+Jersey Number: 11 
+ 
+Sample Test Case 5 
+Input: 
+3 
+2 
+Arjun 
+2 
+Vikas 
+3 
+Mohit 20 5 
+Output: 
+Player Name: Arjun 
+Age: 18 
+Jersey Number: 0 
+Player Name: Vikas 
+Age: 18 
+Jersey Number: 0 
+Player Name: Mohit 
+Age: 20 
+Jersey Number: 5 
+ 
+Sample Test Case 6 
+Input: 
+1 
+3 
+Ravi 23 10 
+Output: 
+Player Name: Ravi 
+Age: 23 
+Jersey Number: 10 
+ 
+8. Method Overloading – Calculator 
+Problem Statement: 
+Riya is solving a mathematics question during her examination and needs to perform different types of 
+calculations. To help her perform these calculations, write a Java program to create a Calculator class that 
+demonstrates method overloading. 
+Create the following overloaded calculate() methods: 
+• int calculate(int a, int b) – Calculate the sum of two integers. 
+• double calculate(double a, double b) – Calculate the sum of two decimal numbers. 
+• int calculate(int a, int b, int c) – Calculate the sum of three integers. 
+In the main() method, take the required values from the user, call the appropriate overloaded calculate() method, 
+and display the result. 
+Constraints: 
+• -1000 ≤ a, b, c ≤ 1000 
+ 
+Input Format 
+The first line contains an integer choice, representing the type of calculation: 
+• 1 – Add two integers. 
+• 2 – Add two decimal numbers. 
+• 3 – Add three integers. 
+For choice 1, the next line contains two integers. 
+For choice 2, the next line contains two decimal numbers. 
+For choice 3, the next line contains three integers. 
+ 
+Output Format 
+Print: 
+Result: X 
+ 
+Sample Test Case 1 
+Input: 
+1 
+25 35 
+Output: 
+Result: 60 
+Explanation: 
+Riya selects option 1 during her paper and enters two integer values, 25 and 35. The calculate(int, int) method is 
+called. 
+25 + 35 = 60 
+ 
+Sample Test Case 2 
+Input: 
+2 
+12.5 7.5 
+Output: 
+Result: 20.0 
+Explanation: 
+Riya selects option 2 and enters two decimal values. The calculate(double, double) method is called. 
+12.5 + 7.5 = 20.0 
+Sample Test Case 3 
+Input: 
+3 
+10 20 30 
+Output: 
+Result: 60 
+Sample Test Case 4 
+Input: 
+1 
+100 250 
+Output: 
+Result: 350 
+Sample Test Case 5 
+Input: 
+2 
+25.5 14.5 
+Output: 
+Result: 40.0 
+Sample Test Case 6 
+Input: 
+3 
+5 15 25 
+Output: 
+Result: 45 
+Coding Questions 
+1. Check Number is Palindrome or Not 
+Problem Statement: Gaurav has a number and wants to check whether it is a palindrome or not. Write a Java 
+program to determine if the given number reads the same from left to right and right to left. 
+Input Format 
+First line: An integer num. 
+Output Format 
+If the number is a palindrome,  
+print: 
+Palindrome 
+Otherwise, print: 
+Not a Palindrome 
+Sample Test Case 1 
+Input: 
+121 
+Output: 
+Palindrome 
+Explanation: 
+The number 121 remains the same when its digits are reversed. Therefore, the output is Palindrome. 
+Sample Test Case 2 
+Input: 
+12345 
+Output: 
+Not a Palindrome 
+Explanation: 
+The number 12345 becomes 54321 when reversed, which is different from the original number. Therefore, the 
+output is Not a Palindrome. 
+Sample Test Case 3 
+Input: 
+1221 
+Output: 
+Palindrome 
+Sample Test Case 4 
+Input: 
+9876 
+Output: 
+Not a Palindrome 
+Sample Test Case 5 
+Input: 
+1001 
+Output: 
+Palindrome 
+Sample Test Case 6 
+Input: 
+12321 
+Output: 
+Palindrome 
+2. Check Number is Prime or Not 
+Problem Statement: Aman and his friends are playing a number game. They have selected a number and want 
+to find out whether the number is a prime number or not. A prime number is a number greater than 1 that has 
+exactly two factors: 1 and itself. 
+Help Aman and his friends write a Java program to determine whether the given number is prime or not. 
+Input Format 
+First line: An integer num. 
+Output Format 
+If the number is prime, print: 
+Prime 
+Otherwise, print: 
+Not Prime 
+Sample Test Case 1 
+Input: 
+7 
+Output: 
+Prime 
+Explanation: 
+The number 7 has exactly two factors, 1 and 7. Therefore, 7 is a prime number, and the output is Prime. 
+Sample Test Case 2 
+Input: 
+12 
+Output: 
+Not Prime 
+Explanation: 
+The number 12 has more than two factors: 1, 2, 3, 4, 6, and 12. Therefore, 12 is not a prime number, and the 
+output is Not Prime. 
+Sample Test Case 3 
+Input: 
+2 
+Output: 
+Prime 
+Sample Test Case 4 
+Input: 
+25 
+Output: 
+Not Prime 
+Sample Test Case 5 
+Input: 
+31 
+Output: 
+Prime 
+Sample Test Case 6 
+Input: 
+1 
+Output: 
+Not Prime 
+3. Search an Element in an Array 
+Problem Statement: Aman and his group of pharmacy clinical students are working on a medicine inventory 
+system. They have recorded the medicine codes in an array and want to search for a particular medicine code. 
+Write a Java program to take the array elements from the user and then search for the given element. 
+If the element is found, print its position in the array. Otherwise, print Element Not Found. 
+Input Format 
+First line: An integer n, representing the number of elements in the array. 
+Second line: n integers representing the array elements. 
+Third line: An integer search, representing the element to be searched. 
+Output Format 
+If the element is found, print: 
+Element Found at Position X 
+Otherwise, print: 
+Element Not Found 
+Note: Position starts from 1. 
+Sample Test Case 1 
+Input: 
+5 
+101 205 310 415 520 
+310 
+Output: 
+Element Found at Position 3 
+Explanation: 
+The pharmacy clinical group entered five medicine codes. The code 310 is present at the third position in the 
+array. Therefore, the output is Element Found at Position 3. 
+Sample Test Case 2 
+Input: 
+6 
+120 235 340 455 560 675 
+400 
+Output: 
+Element Not Found 
+Explanation: 
+The pharmacy clinical group wants to search for the code 400. This code is not present in the given array. 
+Therefore, the output is Element Not Found. 
+Sample Test Case 3 
+Input: 
+4 
+25 50 75 100 
+25 
+Output: 
+Element Found at Position 1 
+Sample Test Case 4 
+Input: 
+7 
+12 24 36 48 60 72 84 
+72 
+Output: 
+Element Found at Position 6 
+Sample Test Case 5 
+Input: 
+5 
+15 30 45 60 75 
+90 
+Output: 
+Element Not Found 
+Sample Test Case 6 
+Input: 
+6 
+11 22 33 44 55 66 
+66 
+Output: 
+Element Found at Position 6 
+ 
+4. Count Even and Odd Numbers in an Array 
+Problem Statement: A group of pharmacy clinical students has recorded a set of numerical values in an array. 
+They want to analyze the values and count how many numbers are even and how many are odd. 
+Write a Java program to take the array elements from the user and count the total number of even and odd numbers 
+present in the array. 
+Input Format 
+First line: An integer n, representing the number of elements in the array. 
+Second line: n integers representing the array elements. 
+Output Format 
+Print the number of even and odd elements in the following format: 
+Even Count: X 
+Odd Count: Y 
+Sample Test Case 1 
+Input: 
+6 
+10 15 20 25 30 35 
+Output: 
+Even Count: 3 
+Odd Count: 3 
+Explanation: 
+The even numbers are 10, 20, and 30, so the even count is 3. The odd numbers are 15, 25, and 35, so the odd 
+count is 3. 
+Sample Test Case 2 
+Input: 
+5 
+2 4 6 8 10 
+Output: 
+Even Count: 5 
+Odd Count: 0 
+Explanation: 
+All the numbers in the array are even. Therefore, the even count is 5 and the odd count is 0. 
+Sample Test Case 3 
+Input: 
+7 
+1 3 5 7 9 11 13 
+Output: 
+Even Count: 0 
+Odd Count: 7 
+Sample Test Case 4 
+Input: 
+8 
+12 7 18 25 30 41 50 63 
+Output: 
+Even Count: 4 
+Odd Count: 4 
+Sample Test Case 5 
+Input: 
+5 
+0 10 20 30 40 
+Output: 
+Even Count: 5 
+Odd Count: 0 
+Sample Test Case 6 
+Input: 
+6 -5 -4 -3 -2 -1 0 
+Output: 
+Even Count: 3 
+Odd Count: 3 
+5. Count Positive and Negative Numbers in an Array 
+Problem Statement: A group of boys played a match and recorded the scores of different players in an array. 
+Some scores may be positive and some may be negative. Write a Java program to take the array elements from 
+the user and count how many positive and negative numbers are present in the array. 
+Input Format 
+• First line: An integer n, representing the number of elements in the array. 
+• Second line: n integers representing the array elements. 
+Output Format 
+Print the count of positive and negative numbers in the following format: 
+Positive Count: X 
+Negative Count: Y 
+Sample Test Case 1 
+Input: 
+6 
+10 -5 20 -8 15 -3 
+Output: 
+Positive Count: 3 
+Negative Count: 3 
+Explanation: 
+The positive numbers are 10, 20, and 15, so the positive count is 3. The negative numbers are -5, -8, and -3, so 
+the negative count is 3. 
+Sample Test Case 2 
+Input: 
+5 
+12 25 -7 18 30 
+Output: 
+Positive Count: 4 
+Negative Count: 1 
+Explanation: 
+The positive numbers are 12, 25, 18, and 30, while -7 is the only negative number. Therefore, the positive count 
+is 4 and the negative count is 1. 
+Sample Test Case 3 
+Input: 
+7 -2 -4 -6 -8 -10 -12 -14 
+Output: 
+Positive Count: 0 
+Negative Count: 7 
+Sample Test Case 4 
+Input: 
+6 
+5 10 15 20 25 30 
+Output: 
+Positive Count: 6 
+Negative Count: 0 
+Sample Test Case 5 
+Input: 
+5 -10 20 -30 40 -50 
+Output: 
+Positive Count: 2 
+Negative Count: 3 
+Sample Test Case 6 
+Input: 
+6 
+0 -5 10 -15 20 0 
+Output: 
+Positive Count: 2 
+Negative Count: 2 
+6. Find the Sum of Array Elements 
+Problem Statement: A group of boys played a match and recorded the scores of all the players in an array. 
+They want to calculate the total score obtained by all the players. 
+Write a Java program to take the number of elements and array elements from the user using the Scanner class 
+and calculate the sum of all the elements in the array. 
+Input Format 
+• First line: An integer n, representing the number of elements in the array. 
+• Second line: n integers representing the array elements. 
+Output Format 
+Print the sum of all array elements in the following format: 
+Sum = X 
+Sample Test Case 1 
+Input: 
+5 
+10 20 30 40 50 
+Output: 
+Sum = 150 
+Explanation: 
+The sum of all elements is 10 + 20 + 30 + 40 + 50 = 150. Therefore, the output is Sum = 150. 
+Sample Test Case 2 
+Input: 
+6 
+5 10 15 20 25 30 
+Output: 
+Sum = 105 
+Explanation: 
+The sum of all elements is 5 + 10 + 15 + 20 + 25 + 30 = 105. Therefore, the output is Sum = 105. 
+Sample Test Case 3 
+Input: 
+4 
+1 2 3 4 
+Output: 
+Sum = 10 
+Sample Test Case 4 
+Input: 
+5 
+10 -5 20 -10 15 
+Output: 
+Sum = 30 
+Sample Test Case 5 
+Input: 
+3 
+100 200 300 
+Output: 
+Sum = 600 
+Sample Test Case 6 
+Input: 
+5 
+0 10 0 20 0 
+Output: 
+Sum = 30 
+7. Reverse an Array 
+Problem Statement: A group of boys played a match and recorded the scores of the players in an array. They 
+want to display the scores in the reverse order. 
+Write a Java program to take the number of elements and array elements from the user using the Scanner class 
+and print the elements of the array in reverse order. 
+Input Format 
+• First line: An integer n, representing the number of elements in the array. 
+• Second line: n integers representing the array elements. 
+Output Format 
+Print the array elements in reverse order. 
+Sample Test Case 1 
+Input: 
+5 
+10 20 30 40 50 
+Output: 
+50 40 30 20 10 
+Explanation: 
+The original array is 10 20 30 40 50. After reversing the order of the elements, the array becomes 50 40 30 20 
+10. 
+Sample Test Case 2 
+Input: 
+6 
+5 10 15 20 25 30 
+Output: 
+30 25 20 15 10 5 
+Explanation: 
+The original array is 5 10 15 20 25 30. Reading the elements from the last element to the first gives 30 25 20 15 
+10 5. 
+Sample Test Case 3 
+Input: 
+4 
+1 2 3 4 
+Output: 
+4 3 2 1 
+Sample Test Case 4 
+Input: 
+5 
+12 7 25 18 30 
+Output: 
+30 18 25 7 12 
+Sample Test Case 5 
+Input: 
+3 
+100 200 300 
+Output: 
+300 200 100 
+Sample Test Case 6 
+Input: 
+6 -5 10 -15 20 -25 30 
+Output: 
+30 -25 20 -15 10 -5 
+8. Copy Elements from One Array to Another 
+Problem Statement: Sachin's marks were recorded in an original array. To prepare a second record, he copied 
+all the marks into another array. However, a discrepancy was found between the original and copied records. 
+Write a Java program to take the elements of the original array from the user using the Scanner class and copy 
+all its elements into a second array. Display both the original array and the copied array. 
+Input Format 
+• First line: An integer n, representing the number of elements in the array. 
+• Second line: n integers representing the elements of the original array. 
+Output Format 
+Print the elements of the original array and the copied array in the following format: 
+Original Array: 
+Copied Array: 
+Sample Test Case 1 
+Input: 
+5 
+85 90 78 92 88 
+Output: 
+Original Array: 
+85 90 78 92 88 
+Copied Array: 
+85 90 78 92 88 
+Explanation: 
+The elements from the original array are copied into the second array without changing their values. Therefore, 
+both arrays contain the same elements. 
+Sample Test Case 2 
+Input: 
+4 
+70 65 80 75 
+Output: 
+Original Array: 
+70 65 80 75 
+Copied Array: 
+70 65 80 75 
+Explanation: 
+All four elements from the original array are copied into the second array. Hence, the copied array contains the 
+same marks as the original array. 
+Sample Test Case 3 
+Input: 
+6 
+45 56 67 78 89 90 
+Output: 
+Original Array: 
+45 56 67 78 89 90 
+Copied Array: 
+45 56 67 78 89 90 
+Sample Test Case 4 
+Input: 
+3 
+100 95 88 
+Output: 
+Original Array: 
+100 95 88 
+Copied Array: 
+100 95 88 
+Sample Test Case 5 
+Input: 
+5 
+55 60 72 81 94 
+Output: 
+Original Array: 
+55 60 72 81 94 
+Copied Array: 
+55 60 72 81 94 
+Sample Test Case 6 
+Input: 
+4 
+35 48 62 79 
+Output: 
+Original Array: 
+35 48 62 79 
+Copied Array: 
+35 48 62 79 
+9. Print Diagonal Elements from a 2D Array 
+Problem Statement: A group of students is working with a 2D array and wants to identify the elements present 
+on its diagonal. Write a Java program to take the number of rows, columns, and array elements from the user 
+using the Scanner class and print the main diagonal elements of the array. 
+The main diagonal starts from the top-left corner and ends at the bottom-right corner. 
+Input Format 
+• First line: Two integers rows and columns, representing the number of rows and columns. 
+• Next rows lines: columns integers representing the elements of the 2D array. 
+Output Format 
+Print the main diagonal elements in a single line. 
+Sample Test Case 1 
+Input: 
+3 3 
+10 20 30 
+40 50 60 
+70 80 90 
+Output: 
+10 50 90 
+Explanation: 
+The main diagonal elements are 10, 50, and 90. Their positions are [0][0], [1][1], and [2][2]. 
+Sample Test Case 2 
+Input: 
+4 4 
+1 2 3 4 
+5 6 7 8 
+9 10 11 12 
+13 14 15 16 
+Output: 
+1 6 11 16 
+Explanation: 
+The main diagonal elements are 1, 6, 11, and 16, which are located at [0][0], [1][1], [2][2], and [3][3]. 
+Sample Test Case 3 
+Input: 
+2 2 
+5 10 
+15 20 
+Output: 
+5 20 
+Sample Test Case 4 
+Input: 
+3 3 
+2 4 6 
+8 10 12 
+14 16 18 
+Output: 
+2 10 18 
+Sample Test Case 5 
+Input: 
+3 3 
+7 8 9 
+4 5 6 
+1 2 3 
+Output: 
+7 5 3 
+Sample Test Case 6 
+Input: 
+4 4 
+11 22 33 44 
+55 66 77 88 
+99 10 20 30 
+40 50 60 70 
+Output: 
+11 66 20 70 
+ 
+10. Find the Sum of Elements in a 2D Array 
+Problem Statement: A group of students is working with a 2D array. They want to calculate the total sum of all 
+the elements present in the array. 
+Write a Java program to take the number of rows and columns from the user and then take all the 2D array 
+elements from the user using the Scanner class. Calculate and print the sum of all the elements in the 2D array. 
+Input Format 
+• First line: Two integers rows and columns, representing the number of rows and columns. 
+• Next rows lines: columns integers representing the elements of the 2D array. 
+Output Format 
+Print the sum of all elements in the 2D array in the following format: 
+Sum = X 
+Sample Test Case 1 
+Input: 
+2 3 
+10 20 30 
+40 50 60 
+Output: 
+Sum = 210 
+Explanation: 
+The sum of all elements is: 
+10 + 20 + 30 + 40 + 50 + 60 = 210 
+Therefore, the output is Sum = 210. 
+Sample Test Case 2 
+Input: 
+3 3 
+1 2 3 
+4 5 6 
+7 8 9 
+Output: 
+Sum = 45 
+Explanation: 
+The sum of all elements is: 
+1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 = 45 
+Therefore, the output is Sum = 45. 
+Sample Test Case 3 
+Input: 
+2 2 
+5 10 
+15 20 
+Output: 
+Sum = 50 
+Sample Test Case 4 
+Input: 
+3 2 
+10 20 
+30 40 
+50 60 
+Output: 
+Sum = 210 
+Sample Test Case 5 
+Input: 
+2 4 
+2 4 6 8 
+10 12 14 16 
+Output: 
+Sum = 72 
+Sample Test Case 6 
+Input: 
+3 3 -5 10 -15 
+20 -25 30 -35 40 50 
+Output: 
+Sum = 70 
+Coding questions-based Collections: ArrayList 
+1. Maximum and Minimum Element in ArrayList 
+Problem Statement: 
+A student is maintaining a list of marks using an ArrayList<Integer>. Write a Java program to find the 
+maximum and minimum element from the given ArrayList. 
+The program should accept the number of elements and their values from the user, store them in an ArrayList, 
+and determine the largest and smallest elements. 
+Input Format 
+• First line: An integer n representing the number of elements.  
+• Second line: n integer elements separated by spaces.  
+Output Format 
+Print the maximum and minimum elements in the following format: 
+Maximum: value 
+Minimum: value 
+Sample Test Case 1 
+Input: 
+6 
+45 78 23 91 56 34 
+Output: 
+Maximum: 91 
+Minimum: 23 
+Explanation: 
+The largest element in the ArrayList is 91, and the smallest element is 23. 
+Sample Test Case 2 
+Input: 
+5 
+120 85 250 45 175 
+Output: 
+Maximum: 250 
+Minimum: 45 
+Explanation: 
+The maximum element is 250, while the minimum element is 45. 
+Sample Test Case 3 
+Input: 
+4 
+10 20 30 40 
+Output: 
+Maximum: 40 
+Minimum: 10 
+Sample Test Case 4 
+Input: 
+5 
+55 55 55 55 55 
+Output: 
+Maximum: 55 
+Minimum: 55 
+Sample Test Case 5 
+Input: 
+7 
+12 89 34 67 5 45 23 
+Output: 
+Maximum: 89 
+Minimum: 5 
+Sample Test Case 6 
+Input: 
+6 -10 25 -35 40 15 -5 
+Output: 
+Maximum: 40 
+Minimum: -35 
+2. Find Second Largest Element in ArrayList 
+Problem Statement: 
+A sports application stores the scores of players in an ArrayList<Integer>. Write a Java program to find the 
+second largest element from the given ArrayList. 
+Input Format 
+First line: An integer n representing the number of elements. 
+Second line: n integer scores. 
+Output Format 
+Print the second largest element. 
+Sample Test Case 1 
+Input: 
+6 
+45 78 23 91 56 34 
+Output: 
+78 
+Explanation: 
+The largest element is 91 and the second largest element is 78. 
+Sample Test Case 2 
+Input: 
+5 
+120 85 250 45 175 
+Output: 
+175 
+Explanation: 
+The largest element is 250, so the second largest element is 175. 
+Sample Test Case 3 
+Input: 
+5 
+10 50 30 80 60 
+Output: 
+60 
+Sample Test Case 4 
+Input: 
+6 
+25 15 75 45 95 65 
+Output: 
+75 
+Sample Test Case 5 
+Input: 
+4 
+100 200 150 50 
+Output: 
+150 
+Sample Test Case 6 
+Input: 
+7 
+12 89 34 67 5 45 23 
+Output: 
+67 
+3. Sum of ArrayList Elements 
+Problem Statement: 
+A school maintains the marks of students who appeared for a class test. The marks are stored in an 
+ArrayList<Integer> because the number of students may vary. The teacher wants to calculate the total marks 
+obtained by all students for further analysis. Write a Java program that accepts the number of students and their 
+marks, stores all the marks in an ArrayList<Integer>, and calculates the sum of all the elements present in the 
+list. 
+The program should traverse the ArrayList and add each element to a sum variable. Finally, display the total 
+sum of all the marks. 
+Input Format 
+First line: An integer n representing the number of students. 
+Second line: n integer marks separated by spaces. 
+Output Format 
+Print the sum of all elements in the ArrayList. 
+Sample Test Case 1 
+Input: 
+5 
+10 20 30 40 50 
+Output: 
+150 
+Explanation: 
+The marks are 10, 20, 30, 40, 50. Their total is 10 + 20 + 30 + 40 + 50 = 150. 
+Sample Test Case 2 
+Input: 
+6 
+12 15 8 20 10 5 
+Output: 
+70 
+Explanation: 
+The sum of all marks is 12 + 15 + 8 + 20 + 10 + 5 = 70. 
+Sample Test Case 3 
+Input: 
+4 
+25 35 45 55 
+Output: 
+160 
+Sample Test Case 4 
+Input: 
+5 
+5 10 15 20 25 
+Output: 
+75 
+Sample Test Case 5 
+Input: 
+3 
+100 200 300 
+Output: 
+600 
+Sample Test Case 6 
+Input: 
+7 
+2 4 6 8 10 12 14 
+Output: 
+56 
+4. Count Even and Odd Numbers from ArrayList 
+Problem Statement: 
+A teacher is conducting a mathematics activity in which students are given a list of integers. The teacher wants 
+to analyze the numbers by separating them into two categories: even numbers and odd numbers. The numbers 
+are stored in an ArrayList<Integer> for easy processing. 
+Write a Java program that accepts n integers from the user and stores them in an ArrayList<Integer>. The 
+program should traverse the ArrayList and count the total number of even and odd elements. A number is 
+considered even if it is completely divisible by 2; otherwise, it is considered odd. Finally, display the count of 
+even numbers followed by the count of odd numbers. 
+Input Format 
+First line: An integer n representing the number of elements. 
+Second line: n integer elements separated by spaces. 
+Output Format 
+Print the count of even numbers and odd numbers on separate lines. 
+Sample Test Case 1 
+Input: 
+6 
+12 15 20 7 18 9 
+Output: 
+3 
+3 
+Explanation: 
+The even numbers are 12, 20, 18, so there are 3 even numbers. The odd numbers are 15, 7, 9, so there are 3 odd 
+numbers. 
+Sample Test Case 2 
+Input: 
+5 
+11 13 17 21 25 
+Output: 
+0 
+5 
+Explanation: 
+All the numbers are odd. Therefore, there are 0 even numbers and 5 odd numbers. 
+Sample Test Case 3 
+Input: 
+7 
+2 4 6 8 10 13 15 
+Output: 
+5 
+2 
+Sample Test Case 4 
+Input: 
+4 
+9 21 35 47 
+Output: 
+0 
+4 
+Sample Test Case 5 
+Input: 
+6 
+10 20 30 40 50 60 
+Output: 
+6 
+0 
+Sample Test Case 6 
+Input: 
+8 
+5 8 11 14 17 20 23 26 
+Output: 
+4 
+4 
+ 
+5. Reverse ArrayList 
+Problem Statement: 
+A music application stores the IDs of songs in an ArrayList<Integer>. The application displays the songs in the 
+order in which they were added, but the user now wants to view them in the reverse order. Write a Java program 
+that accepts n integer elements from the user, stores them in an ArrayList<Integer>, and reverses the order of all 
+elements. 
+The program should traverse the ArrayList from the last element to the first element and display the elements in 
+reverse order. 
+Input Format 
+First line: An integer n representing the number of elements. 
+Second line: n integer elements separated by spaces. 
+Output Format 
+Print the elements of the ArrayList in reverse order. 
+Sample Test Case 1 
+Input: 
+6 
+10 20 30 40 50 60 
+Output: 
+60 50 40 30 20 10 
+Explanation: 
+The original ArrayList contains 10 20 30 40 50 60. Reading the elements from the last position to the first 
+position produces 60 50 40 30 20 10. 
+Sample Test Case 2 
+Input: 
+5 
+15 25 35 45 55 
+Output: 
+55 45 35 25 15 
+Explanation: 
+The last element 55 is displayed first, followed by the remaining elements in reverse order. 
+Sample Test Case 3 
+Input: 
+4 
+12 24 36 48 
+Output: 
+48 36 24 12 
+Sample Test Case 4 
+Input: 
+7 
+5 10 15 20 25 30 35 
+Output: 
+35 30 25 20 15 10 5 
+Sample Test Case 5 
+Input: 
+3 
+100 200 300 
+Output: 
+300 200 100 
+Sample Test Case 6 
+Input: 
+8 
+2 4 6 8 10 12 14 16 
+Output: 
+16 14 12 10 8 6 4 2 
+Coding questions based on Exception Handling 
+1. Invalid Number Conversion 
+Problem Statement: 
+A payment system receives an amount as a string. Before processing the payment, the system must convert it 
+into an integer. Write a Java program using try and catch to handle invalid numeric input. 
+Input Format 
+First line: A string amount. 
+Output Format 
+If conversion is successful: 
+Amount: value 
+Otherwise: 
+Invalid Amount 
+Sample Test Case 1 
+Input: 
+5000 
+Output: 
+Amount: 5000 
+Explanation: 
+The string "5000" can successfully be converted into an integer. 
+Sample Test Case 2 
+Input: 
+five thousand 
+Output: 
+Invalid Amount 
+Explanation: 
+The given string does not represent a valid integer, so NumberFormatException is handled. 
+Sample Test Case 3 
+Input: 
+2500 
+Output: 
+Amount: 2500 
+Sample Test Case 4 
+Input: 
+12A5 
+Output: 
+Invalid Amount 
+Sample Test Case 5 
+Input: 
+9999 
+Output: 
+Amount: 9999 
+Sample Test Case 6 
+Input: 
+100@200 
+Output: 
+Invalid Amount 
+2. Age Validation 
+Problem Statement: 
+An amusement park allows visitors to enter a special ride only if their age is at least 18. Write a Java program 
+that uses the throw keyword to generate an exception when the entered age is below 18. 
+Input Format 
+First line: An integer age. 
+Output Format 
+If age is 18 or above: 
+Eligible for Ride 
+Otherwise: 
+Not Eligible for Ride 
+Sample Test Case 1 
+Input: 
+20 
+Output: 
+Eligible for Ride 
+Explanation: 
+The visitor is 20 years old, which satisfies the minimum age requirement of 18. 
+Sample Test Case 2 
+Input: 
+15 
+Output: 
+Not Eligible for Ride 
+Explanation: 
+The visitor is below 18, so the program uses throw to generate an exception. 
+Sample Test Case 3 
+Input: 
+18 
+Output: 
+Eligible for Ride 
+Sample Test Case 4 
+Input: 
+25 
+Output: 
+Eligible for Ride 
+Sample Test Case 5 
+Input: 
+12 
+Output: 
+Not Eligible for Ride 
+Sample Test Case 6 
+Input: 
+17 
+Output: 
+Not Eligible for Ride 
+ 
+3. Bank Transaction 
+Problem Statement: 
+A banking application performs a withdrawal operation. Whether the transaction succeeds or fails, the system 
+must display a message indicating that the transaction process has ended. Write a Java program using try, catch, 
+and finally. 
+Input Format 
+First line: Available balance. 
+Second line: Withdrawal amount. 
+Output Format 
+For a successful withdrawal: 
+Withdrawal Successful 
+Transaction Completed 
+If the withdrawal amount is greater than the balance: 
+Insufficient Balance 
+Transaction Completed 
+Sample Test Case 1 
+Input: 
+10000 
+3000 
+Output: 
+Withdrawal Successful 
+Transaction Completed 
+Explanation: 
+The withdrawal amount is less than the available balance, so the transaction is successful. The finally block 
+displays Transaction Completed. 
+Sample Test Case 2 
+Input: 
+5000 
+7000 
+Output: 
+Insufficient Balance 
+Transaction Completed 
+Explanation: 
+The withdrawal amount exceeds the available balance, so an exception is handled. The finally block still 
+executes and displays Transaction Completed. 
+Sample Test Case 3 
+Input: 
+20000 
+5000 
+Output: 
+Withdrawal Successful 
+Transaction Completed 
+Sample Test Case 4 
+Input: 
+3000 
+3000 
+Output: 
+Withdrawal Successful 
+Transaction Completed 
+Sample Test Case 5 
+Input: 
+8000 
+10000 
+Output: 
+Insufficient Balance 
+Transaction Completed 
+Sample Test Case 6 
+Input: 
+15000 
+2500 
+Output: 
+Withdrawal Successful 
+Transaction Completed 
+ 
+4. Convert String to Integer  
+Problem Statement: A ticket booking system receives the number of tickets as a string. The system must 
+convert the input into an integer before processing the booking. Use try-catch to handle invalid numeric input. 
+Input Format 
+First line: A string tickets. 
+Output Format 
+For valid input: 
+Tickets: value 
+For invalid input: 
+Invalid Ticket Count 
+Sample Test Case 1 
+Input: 
+5 
+Output: 
+Tickets: 5 
+Explanation: 
+The input "5" can be successfully converted into an integer. 
+Sample Test Case 2 
+Input: 
+five 
+Output: 
+Invalid Ticket Count 
+Explanation: 
+"five" is not a valid integer, so NumberFormatException is caught. 
+Sample Test Case 3 
+Input: 
+10 
+Output: 
+Tickets: 10 
+Sample Test Case 4 
+Input: 
+12A 
+Output: 
+Invalid Ticket Count 
+Sample Test Case 5 
+Input: 
+0 
+Output: 
+Tickets: 0 
+Sample Test Case 6 
+Input: 
+25B 
+Output: 
+Invalid Ticket Count 
+ 
+5. Safe Array Access  
+Problem Statement: A warehouse application stores product quantities in an array. The user enters an index to 
+check the quantity of a product. Use multiple catch clauses to handle invalid input and invalid array indexes. 
+Input Format 
+First line: Number of products. 
+Second line: Product quantities. 
+Third line: Index. 
+Output Format 
+Quantity: value 
+For invalid index: 
+Invalid Index 
+For invalid input: 
+Invalid Input 
+Sample Test Case 1 
+Input: 
+4 
+20 30 40 50 
+2 
+Output: 
+Quantity: 40 
+Explanation: 
+Index 2 contains the quantity 40. 
+Sample Test Case 2 
+Input: 
+4 
+20 30 40 50 
+7 
+Output: 
+Invalid Index 
+Explanation: 
+The valid indexes are 0 to 3. Therefore, index 7 causes an array index exception. 
+Sample Test Case 3 
+Input: 
+3 
+10 20 30 
+0 
+Output: 
+Quantity: 10 
+Sample Test Case 4 
+Input: 
+3 
+10 20 30 -1 
+Output: 
+Invalid Index 
+Sample Test Case 5 
+Input: 
+2 
+100 200 
+1 
+Output: 
+Quantity: 200 
+Sample Test Case 6 
+Input: 
+3 
+A B C 
+1 
+Output: 
+Invalid Input 
+ 
+6. ATM Withdrawal 
+Problem Statement: An ATM system first verifies the account balance and then performs a withdrawal. Use a 
+nested try block to handle an invalid withdrawal amount and division-related errors separately. 
+Input Format 
+First line: Account balance. 
+Second line: Withdrawal amount. 
+Output Format 
+Withdrawal Successful 
+If the amount is invalid: 
+Invalid Withdrawal 
+Sample Test Case 1 
+Input: 
+10000 
+2000 
+Output: 
+Withdrawal Successful 
+Explanation: 
+The withdrawal amount is within the available balance, so the transaction is completed successfully. 
+Sample Test Case 2 
+Input: 
+5000 
+7000 
+Output: 
+Invalid Withdrawal 
+Explanation: 
+The requested amount is greater than the available balance, so the nested exception handling prevents the invalid 
+transaction. 
+Sample Test Case 3 
+Input: 
+15000 
+5000 
+Output: 
+Withdrawal Successful 
+Sample Test Case 4 
+Input: 
+3000 
+3000 
+Output: 
+Withdrawal Successful 
+Sample Test Case 5 
+Input: 
+1000 
+1500 
+Output: 
+Invalid Withdrawal 
+Sample Test Case 6 
+Input: 
+20000 
+10000 
+Output: 
+Withdrawal Successful 
+ 
+7. Validate Marks 
+Problem Statement: An examination system accepts marks for a subject. Marks must be between 0 and 100. 
+Use the throw keyword to generate an exception when invalid marks are entered. 
+Input Format 
+First line: Integer marks. 
+Output Format 
+Valid Marks 
+or 
+Invalid Marks 
+Sample Test Case 1 
+Input: 
+85 
+Output: 
+Valid Marks 
+Explanation: 
+85 is within the valid range of 0 to 100. 
+Sample Test Case 2 
+Input: 
+120 
+Output: 
+Invalid Marks 
+Explanation: 
+120 is greater than the maximum allowed marks of 100, so an exception is thrown. 
+Sample Test Case 3 
+Input: 
+0 
+Output: 
+Valid Marks 
+Sample Test Case 4 
+Input: 
+100 
+Output: 
+Valid Marks 
+Sample Test Case 5 
+Input: -10 
+Output: 
+Invalid Marks 
+Sample Test Case 6 
+Input: 
+101 
+Output: 
+Invalid Marks 
+ 
+8. Transaction Completion 
+Problem Statement: An online payment application processes a transaction. Whether the payment is successful 
+or an exception occurs, the system must always display "Transaction Process Completed". Use the finally block. 
+Input Format 
+First line: Account balance. 
+Second line: Payment amount. 
+Output Format 
+For successful payment: 
+Payment Successful 
+Transaction Process Completed 
+For insufficient balance: 
+Insufficient Balance 
+Transaction Process Completed 
+Sample Test Case 1 
+Input: 
+5000 
+2000 
+Output: 
+Payment Successful 
+Transaction Process Completed 
+Explanation: 
+The payment amount is within the available balance, so the payment succeeds. The finally block prints the 
+completion message. 
+Sample Test Case 2 
+Input: 
+3000 
+5000 
+Output: 
+Insufficient Balance 
+Transaction Process Completed 
+Explanation: 
+The payment exceeds the available balance, but the finally block still executes and displays the completion 
+message. 
+Sample Test Case 3 
+Input: 
+10000 
+10000 
+Output: 
+Payment Successful 
+Transaction Process Completed 
+Sample Test Case 4 
+Input: 
+1000 
+1500 
+Output: 
+Insufficient Balance 
+Transaction Process Completed 
+Sample Test Case 5 
+Input: 
+8000 
+3000 
+Output: 
+Payment Successful 
+Transaction Process Completed 
+Sample Test Case 6 
+Input: 
+2000 
+2500 
+Output: 
+Insufficient Balance 
+Transaction Process Completed 
+ 
+9. Fruit Selling System  
+Problem Statement: 
+Riya sells fruits at a local market. She maintains the price of fruits and wants to calculate the total cost based on 
+the quantity purchased by a customer. Write a Java program using try, catch, and finally to safely handle 
+invalid input and ensure that the transaction completion message is always displayed. 
+The program should store the price of a fruit and accept the quantity from the user. The total cost is calculated 
+as: 
+Total Cost = Price × Quantity 
+If the user enters an invalid quantity, the program should handle the exception using catch. 
+The finally block must always print: 
+Transaction Completed 
+Input Format 
+The input consists of two lines: 
+First line: An integer representing the price of one fruit. 
+Second line: An integer representing the quantity purchased. 
+Output Format 
+If the input is valid, print: 
+Total Cost: <total> 
+Transaction Completed 
+If the quantity is invalid or cannot be converted into an integer, print: 
+Invalid Quantity 
+Transaction Completed 
+Sample Test Case 1 
+Input: 
+50 
+4 
+Output: 
+Total Cost: 200 
+Transaction Completed 
+Explanation: 
+The price of one fruit is ₹50 and the customer purchases 4 fruits. Therefore, the total cost is 50 × 4 = 200. The 
+finally block then prints Transaction Completed. 
+Sample Test Case 2 
+Input: 
+40 
+abc 
+Output: 
+Invalid Quantity 
+Transaction Completed 
+Explanation: 
+The quantity abc is not a valid integer, so a NumberFormatException occurs and is handled by the catch block. 
+The finally block still executes and prints Transaction Completed. 
+Sample Test Case 3 
+Input: 
+30 
+5 
+Output: 
+Total Cost: 150 
+Transaction Completed 
+Sample Test Case 4 
+Input: 
+25 
+10 
+Output: 
+Total Cost: 250 
+Transaction Completed 
+Sample Test Case 5 
+Input: 
+60 
+xyz 
+Output: 
+Invalid Quantity 
+Transaction Completed 
+Sample Test Case 6 
+Input: 
+100 
+3 
+Output: 
+Total Cost: 300 
+Transaction Completed 
+ 
+10. Bank Account Validation  
+Problem Statement: 
+Riya is managing a banking system where customers can request a cash withdrawal from their accounts. Before 
+processing a withdrawal, the system must verify whether the requested withdrawal amount is valid. 
+Write a Java program that uses throws to declare an exception when the withdrawal amount is invalid. The 
+program should use a finally block to display a message indicating that the banking transaction has been 
+completed, regardless of whether an exception occurs. 
+Create a method named validateWithdrawal() that accepts the withdrawal amount. If the amount is less than or 
+equal to 0, the method should throw an exception. 
+Input Format 
+The input consists of one line: 
+An integer representing the withdrawal amount. 
+Output Format 
+If the withdrawal amount is valid, print: 
+Valid Withdrawal 
+Transaction Completed 
+If the withdrawal amount is invalid, print: 
+Invalid Withdrawal 
+Transaction Completed 
+Sample Test Case 1 
+Input: 
+5000 
+Output: 
+Valid Withdrawal 
+Transaction Completed 
+Explanation: 
+The withdrawal amount is greater than zero, so it is considered valid. The finally block executes and prints 
+Transaction Completed. 
+Sample Test Case 2 
+Input: 
+0 
+Output: 
+Invalid Withdrawal 
+Transaction Completed 
+Explanation: 
+A withdrawal amount of zero is invalid. The validateWithdrawal() method throws an exception using throw and 
+declares it using throws. The finally block executes regardless of the exception. 
+Sample Test Case 3 
+Input: 
+2500 
+Output: 
+Valid Withdrawal 
+Transaction Completed 
+Sample Test Case 4 
+Input: -1000 
+Output: 
+Invalid Withdrawal 
+Transaction Completed 
+Sample Test Case 5 
+Input: 
+10000 
+Output: 
+Valid Withdrawal 
+Transaction Completed 
+Sample Test Case 6 
+Input: -500 
+Output: 
+Invalid Withdrawal 
+Transaction Completed 
+
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-08-18T17:51:35+05:30.
+</ADDITIONAL_METADATA>
