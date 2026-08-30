@@ -11,8 +11,7 @@ A production-grade, browser-based Java execution workbench built to bridge the g
 Run the following commands in Command Prompt (CMD):
 
 ```cmd
-cd /d "C:\Users\Asus\Documents\CSE AI 4th Sem\Java Reappear\Java Coding Q"
-python server.py
+cmd /k "cd /d "C:\Users\Asus\Documents\CSE AI 4th Sem\Java Reappear\Java Coding Q" && start http://127.0.0.1:5050 && python server.py"
 ```
 
 
