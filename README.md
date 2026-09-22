@@ -1,4 +1,4 @@
-# ☕ Java Practice Compiler — String Processing Lab (49 Qs)
+# ☕ Java Practice Compiler (49 Qs)
 
 **Live Web App:** https://javaprogrammingq.onrender.com
 
